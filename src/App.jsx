@@ -1,5 +1,6 @@
 
 import './App.css'
+import Banner from './components/Banner/Banner'
 import Header from './components/Header/Header'
 
 function App() {
@@ -8,10 +9,7 @@ function App() {
   return (
     <>
       <Header></Header>
-      <h1>appp</h1>
-      <p>lorem 20
-        
-      </p>
+      <Banner></Banner>
     </>
   )
 }

@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "recipe_name": "Chicken Stir Fry",
+      "recipe_image": "https://www.themealdb.com//images//media//meals//kcv6hj1598733479.jpg",
+      "short_description": "A delicious and healthy chicken stir fry dish.",
+      "ingredients": ["550 g chicken", "120 ml soy sauce", "200 g basil leaves", "400 g mushroom"],
+      "preparing_time": "30 min",
+      "calories": "320 calories"
+    },
+    {
+      "id": 2,
+      "recipe_name": "Vegetable Pasta",
+      "recipe_image": "https://www.themealdb.com//images//media//meals//wtsvxx1511296896.jpg",
+      "short_description": "A colorful and flavorful vegetable pasta dish.",
+      "ingredients": ["300 g pasta", "1 onion", "2 bell peppers", "1 zucchini", "200 g cherry tomatoes"],
+      "preparing_time": "25 min",
+      "calories": "250 calories"
+    },
+    {
+      "id": 3,
+      "recipe_name": "Spinach Salad",
+      "recipe_image": "https://www.themealdb.com//images//media//meals//sxysrt1468240488.jpg",
+      "short_description": "A refreshing and nutritious spinach salad.",
+      "ingredients": ["200 g baby spinach", "100 g cherry tomatoes", "1 cucumber", "50 g feta cheese"],
+      "preparing_time": "15 min",
+      "calories": "150 calories"
+    },
+    {
+      "id": 4,
+      "recipe_name": "Grilled Salmon",
+      "recipe_image": "https://www.themealdb.com//images//media//meals//n3xxd91598732796.jpg",
+      "short_description": "Juicy and tender grilled salmon fillets.",
+      "ingredients": ["4 salmon fillets", "2 tbsp olive oil", "1 lemon", "Salt and pepper to taste"],
+      "preparing_time": "20 min",
+      "calories": "280 calories"
+    },
+    {
+      "id": 5,
+      "recipe_name": "Banana Smoothie",
+      "recipe_image": "https://www.themealdb.com//images//media//meals//mlchx21564916997.jpg",
+      "short_description": "Creamy and satisfying banana smoothie.",
+      "ingredients": ["2 ripe bananas", "200 ml milk", "1 tbsp honey", "Ice cubes"],
+      "preparing_time": "10 min",
+      "calories": "200 calories"
+    },
+    {
+      "id": 6,
+      "recipe_name": "Pan Cake",
+      "recipe_image": "https://www.themealdb.com//images//media//meals//rwuyqx1511383174.jpg",
+      "short_description": "Decadent and moist pan cake.",
+      "ingredients": ["200 g flour", "100 g cocoa powder", "200 g sugar", "3 eggs", "200 ml milk"],
+      "preparing_time": "40 min",
+      "calories": "350 calories"
+    }
+  ]
+  

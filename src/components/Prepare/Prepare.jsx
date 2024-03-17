@@ -5,7 +5,7 @@ const Prepare = ({table}) => {
    
 
     return (
-        <div className="md:w-2/5 my-10 text-black bg-slate-200 p-10">
+        <div className="md:w-2/5 my-10 text-black bg-slate-200 p-5">
            <div className="">
            <h1 className="  text-center text-2xl font-bold border-b-2 border-gray-400">Want to cook:{table.length}</h1>
            <hr />
@@ -20,13 +20,15 @@ const Prepare = ({table}) => {
            
             <div className="cart-info">
                 {
-                    table.map(item =>(
+                    table.map((item,index) =>(
                         console.log(item),
-                        <div className="flex py-2" key={item.id}>
-                        <div className="flex-1">{item.recipe_name}</div>
-                        <div className="flex-1">{item.preparing_time} min</div>
-                        <div className="flex-1">{item.calories} kcal</div>
-                        <button className="btn">Prepare</button>
+                        
+                        <div className="flex py-2 font-light text-sm bg-white rounded-3xl mt-3" key={item.id}>
+                            <p className="pt-3 pl-2">{index+1}</p>
+                        <div className="flex-1 py-3 pl-2">{item.recipe_name.slice(0,10)}</div>
+                        <div className="flex-1 py-3">{item.preparing_time} </div>
+                        <div className="flex-1 py-3">{item.calories} </div>
+                        <button className="btn rounded-full bg-green-500 ">Prepare</button>
                     </div>
                     ))
                 }

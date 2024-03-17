@@ -7,7 +7,7 @@ const Food = ({food,handleTable}) => {
   const{id,recipe_name, recipe_image,short_description ,ingredients, preparing_time, calories} = food;
     return (
         <div className=" grid-cols-2">
-            <div className="card w-80 bg-base-200 shadow-xl my-9 ">
+            <div className="card w-72 bg-base-200 shadow-xl my-9 ">
   <figure className="px-7 pt-7">
     <img src={recipe_image} alt="" className="rounded-xl" />
   </figure>

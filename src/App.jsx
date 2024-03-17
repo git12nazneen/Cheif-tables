@@ -16,6 +16,12 @@ function App() {
     setTable(newTable)
 }
 
+const handleDelete =(id)=>{
+  // console.log(id)
+  const newTable = table.filter(item => item.id !=id);
+  console.log(newTable)
+  setTable(newTable)
+}
   return (
     <>
       <Header></Header>
@@ -26,7 +32,7 @@ function App() {
         <Foods handleTable={handleTable}></Foods>
      
    
-      <Prepare table={table}></Prepare>
+      <Prepare table={table} handleDelete={handleDelete}></Prepare>
      
      </div>
     </div>

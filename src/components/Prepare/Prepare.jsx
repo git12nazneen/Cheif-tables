@@ -1,8 +1,11 @@
 
 
-const Prepare = ({table}) => {
-    console.log(table)
+const Prepare = ({table, handleDelete}) => {
+    // console.log(table)
    
+
+   
+
 
     return (
         <div className="md:w-2/5 my-10 text-black bg-slate-200 p-5">
@@ -28,7 +31,8 @@ const Prepare = ({table}) => {
                         <div className="flex-1 py-3 pl-2">{item.recipe_name.slice(0,10)}</div>
                         <div className="flex-1 py-3">{item.preparing_time} </div>
                         <div className="flex-1 py-3">{item.calories} </div>
-                        <button className="btn rounded-full bg-green-500 ">Prepare</button>
+                        <button 
+                        onClick={()=> handleDelete(item.id)} className="btn rounded-full bg-green-500 ">Prepare</button>
                     </div>
                     ))
                 }

@@ -4,7 +4,7 @@ const Food = ({food,handleTable}) => {
   console.log(handleTable)
 
 
-  const{id,recipe_name, recipe_image,short_description ,ingredients, preparing_time, calories} = food;
+  const{recipe_name, recipe_image,short_description ,ingredients, preparing_time, calories} = food;
     return (
         <div className=" grid-cols-2">
             <div className="card w-72 bg-base-200 shadow-xl my-9 ">

@@ -1,11 +1,12 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
 import Food from "../Food/Food";
 
 
-const Foods = () => {
+const Foods = ({handleTable}) => {
 
     const [foods, setFoods] = useState([])
+
 
     useEffect(()=>{
         fetch('fakedata.json')
@@ -13,18 +14,22 @@ const Foods = () => {
         .then(data => setFoods(data))
     },[])
 
+
+   
+
     return (
-        <div className="container mx-auto max-w-6xl">
+       
           
-            <div>
+            <div className="md:w-3/5 grid grid-cols-2">
             {
                 foods.map(food=> <Food
                 key={food.id}
                 food={food}
+                handleTable={handleTable}
                 ></Food>)
             }
             </div>
-        </div>
+   
     );
 };
 

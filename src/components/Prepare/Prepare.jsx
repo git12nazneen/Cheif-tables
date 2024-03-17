@@ -3,7 +3,7 @@ const Prepare = ({table, handleDelete,current}) => {
     // console.log(table)
 //    console.log(current)
     return (
-        <div className="md:w-2/5 my-10 text-black bg-slate-100 p-5 rounded-3xl border border-gray-300">
+        <div className="md:w-2/5 my-10 text-black bg-slate-100 p-5 rounded-3xl border border-gray-300 lg:mx-auto mx-5">
            <div className="">
            <h1 className="  text-center text-2xl font-bold border-b-2 border-gray-400">Want to cook:{table.length}</h1>
            <hr />

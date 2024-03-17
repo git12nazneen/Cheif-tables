@@ -15,7 +15,7 @@ const Foods = ({handleTable}) => {
 
     return (
        
-            <div className="md:w-3/5 grid grid-cols-2">
+            <div className="md:w-3/5 grid lg:grid-cols-2 grid-cols-1 lg:mx-auto mx-10">
             {
                 foods.map(food=> <Food
                 key={food.id}

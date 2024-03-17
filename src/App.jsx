@@ -12,6 +12,7 @@ import Prepare from './components/Prepare/Prepare'
 
 function App() {
   const [table, setTable] = useState([]);
+  const [current, setCurrent] = useState([])
 
   const handleTable = (foodyitem) =>{
     // setTable([foodyitem])
@@ -22,21 +23,27 @@ function App() {
       setTable(newTable);
     }
     else{
-      // alert('already done')
       toast.error('Already prepare the food,do not choose again!Go and choose another one!');
  
     }
-    // const newTable = [...table, foodyitem];
-    // setTable(newTable)
 
 }
 
-const handleDelete =(id)=>{
+const handleDelete =(data)=>{
   // console.log(id)
-  const newTable = table.filter(item => item.id !=id);
+  const newTable = table.filter(item => item !=data);
   // console.log(newTable)
   setTable(newTable)
+  if (newTable) {
+    setCurrent([...current, data]);
+    toast.info('Item moved to cooking!');
+
+  }
+
 }
+// console.log(current)
+
+
   return (
     <>
       <Header></Header>
@@ -45,7 +52,7 @@ const handleDelete =(id)=>{
     <div className='md:flex'>
      
        <Foods handleTable={handleTable}></Foods>
-      <Prepare table={table} handleDelete={handleDelete}></Prepare>
+      <Prepare table={table} handleDelete={handleDelete} current={current}></Prepare>
      
      </div>
     </div>

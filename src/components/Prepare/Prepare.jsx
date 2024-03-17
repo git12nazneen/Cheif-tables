@@ -1,8 +1,8 @@
 
 
-const Prepare = ({table, handleDelete}) => {
+const Prepare = ({table, handleDelete,current}) => {
     // console.log(table)
-   
+//    console.log(current)
     return (
         <div className="md:w-2/5 my-10 text-black bg-slate-200 p-5">
            <div className="">
@@ -25,18 +25,34 @@ const Prepare = ({table, handleDelete}) => {
                         <div className="flex-1 py-3">{item.preparing_time} </div>
                         <div className="flex-1 py-3">{item.calories} </div>
                         <button 
-                        onClick={()=> handleDelete(item.id)} className="btn rounded-full bg-green-500 ">Prepare</button>
+                        onClick={()=> handleDelete(item)} className="btn rounded-full bg-green-500 ">Prepare</button>
                     </div>
                     ))
                 }
              </div>
-           <h1 className="  text-center text-2xl font-bold border-b-2 border-gray-400">Prepare to cook:</h1>
+           <h1 className="  text-center text-2xl font-bold border-b-2 border-gray-400">Prepare to cook:{current.length}</h1>
            <hr />
            <hr />
            <div className="flex py-3">
             <div className="flex-1">Name</div>
             <div className="flex-1">Time</div>
             <div className="flex-1">Calories</div>
+           </div>
+           <div className="currently-cook">
+          {
+            current.map((data,index)=>{
+                return(
+                    <div className="flex py-2 font-light text-sm bg-white rounded-3xl mt-3">
+                        <p className="pt-3 pl-2">{index+1}</p>
+                    <p className="flex-1 py-3 pl-2">{data.recipe_name.slice(0,10)}</p>
+                    <p className="flex-1 py-3">{data.preparing_time}</p>
+                    <p className="flex-1 py-3">{data.calories}</p>
+                </div>
+                )
+                
+            
+            })
+          }
            </div>
            <div className="flex py-3">
            <div className="flex-1"><h2>Total time:</h2></div> 

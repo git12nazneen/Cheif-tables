@@ -1,5 +1,5 @@
 
-
+import { MdPeopleAlt } from "react-icons/md";
 const Header = () => {
     return (
       <div className="container mx-auto max-w-6xl">
@@ -36,9 +36,9 @@ const Header = () => {
   </div>
   <div className="navbar-end">
   <div className="form-control">
-      <input type="text" placeholder="Search" className="input input-bordered  md:w-auto rounded-3xl w-14" />
+      <input type="text" placeholder= "Search" className="input input-bordered  md:w-auto rounded-3xl w-14" />
     </div>
-    <a className="btn">Button</a>
+    <a className="btn rounded-full bg-green-500 ml-5"><MdPeopleAlt /></a>
   </div>
 </div>
         </div>

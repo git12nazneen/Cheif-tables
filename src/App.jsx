@@ -1,10 +1,14 @@
 
 import { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css'
 import Banner from './components/Banner/Banner'
 import Foods from './components/Foods/Foods'
 import Header from './components/Header/Header'
 import Prepare from './components/Prepare/Prepare'
+
+
 
 function App() {
   const [table, setTable] = useState([]);
@@ -18,7 +22,9 @@ function App() {
       setTable(newTable);
     }
     else{
-      alert('already done')
+      // alert('already done')
+      toast.error('Already prepare the food,do not choose again!Go and choose another one!');
+ 
     }
     // const newTable = [...table, foodyitem];
     // setTable(newTable)
@@ -43,7 +49,7 @@ const handleDelete =(id)=>{
      
      </div>
     </div>
-     
+    <ToastContainer />
     </>
   )
 }

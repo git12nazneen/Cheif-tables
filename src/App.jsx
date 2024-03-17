@@ -12,14 +12,23 @@ function App() {
   const handleTable = (foodyitem) =>{
     // setTable([foodyitem])
     // console.log('foodyitem',foodyitem)
-    const newTable = [...table, foodyitem];
-    setTable(newTable)
+    const isExist = table.find(item => item.id === foodyitem.id);
+    if (!isExist) {
+      const newTable = [...table, foodyitem];
+      setTable(newTable);
+    }
+    else{
+      alert('already done')
+    }
+    // const newTable = [...table, foodyitem];
+    // setTable(newTable)
+
 }
 
 const handleDelete =(id)=>{
   // console.log(id)
   const newTable = table.filter(item => item.id !=id);
-  console.log(newTable)
+  // console.log(newTable)
   setTable(newTable)
 }
   return (
@@ -29,9 +38,7 @@ const handleDelete =(id)=>{
     <div className='container max-w-5xl mx-auto'>
     <div className='md:flex'>
      
-        <Foods handleTable={handleTable}></Foods>
-     
-   
+       <Foods handleTable={handleTable}></Foods>
       <Prepare table={table} handleDelete={handleDelete}></Prepare>
      
      </div>

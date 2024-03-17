@@ -7,19 +7,14 @@ const Foods = ({handleTable}) => {
 
     const [foods, setFoods] = useState([])
 
-
     useEffect(()=>{
         fetch('fakedata.json')
         .then(res => res.json())
         .then(data => setFoods(data))
     },[])
 
-
-   
-
     return (
        
-          
             <div className="md:w-3/5 grid grid-cols-2">
             {
                 foods.map(food=> <Food
@@ -29,7 +24,6 @@ const Foods = ({handleTable}) => {
                 ></Food>)
             }
             </div>
-   
     );
 };
 

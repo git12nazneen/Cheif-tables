@@ -1,8 +1,7 @@
 
 
 const Food = ({food,handleTable}) => {
-  console.log(handleTable)
-
+  // console.log(handleTable)
 
   const{recipe_name, recipe_image,short_description ,ingredients, preparing_time, calories} = food;
     return (

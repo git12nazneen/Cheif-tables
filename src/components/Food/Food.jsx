@@ -22,15 +22,18 @@ const Food = ({food,handleTable}) => {
      }
     </ul>
     <hr />
-    <div className="md:flex my-1 font-light">
-      <div className="flex-1">
-        <h1><CiTimer />{preparing_time}</h1>
+    <div className="md:flex my-1 font-light justify-between">
+      <div className="flex">
+        <h1><CiTimer /></h1>
+        <h1>{preparing_time}</h1>
         </div>
-      <div className="flex-1">
-      <div><FaFire /></div>
-      <div> {calories}</div>
-         
+
+      <div className="flex">
+   
+      <h2><FaFire /></h2>
+      <h2>{calories}</h2>
     </div>
+
     </div>
     <div className="card-actions">
       <button onClick={()=>handleTable(food)} className="btn  bg-green-500 rounded-full">Want to cook</button>
